@@ -5,9 +5,7 @@ export const projetsData = {
   projets: [
     {
       id: "opv-backoffice",
-      title: "OPV Backoffice Management System",
-      org: "Stage de fin d’études — Eurafric Information (Bank of Africa)",
-      domain: "Fintech · Banque · Full Stack · Cybersécurité",
+      title: "Console Backoffice OPV — Gestion des Souscriptions",
       coverImage: "/images/projets/Front/opv-backoffice.jpg",
       video: null,
       images: [
@@ -37,9 +35,7 @@ export const projetsData = {
     },
     {
       id: "scholar-network",
-      title: "Scholar Network — Academic Social Network",
-      org: "Projet académique — IGA Casablanca",
-      domain: "EdTech · Réseau social professionnel · IA",
+      title: "Scholar Network — Réseau Social Académique",
       coverImage: "/images/projets/Front/scholar-network.jpg",
       video: null,
       images: [
@@ -66,9 +62,7 @@ export const projetsData = {
     },
     {
       id: "internship-platform",
-      title: "Internship Management Platform",
-      org: "Projet tutoré — Cycle Ingénieur à l'IGA",
-      domain: "EdTech · Dématérialisation · Automatisation des processus",
+      title: "Plateforme de Gestion des Stages",
       coverImage: "/images/projets/Front/internship-platform.png",
       video: "/images/projets/internship-platform/video.mp4",
       images: [],
@@ -88,9 +82,7 @@ export const projetsData = {
     },
     {
       id: "epicerie-supermarket",
-      title: "L'Épicerie — Intelligent Online Supermarket",
-      org: "Projet académique — IGA Casablanca",
-      domain: "E-commerce · Gestion des stocks · Java EE Enterprise",
+      title: "L'Épicerie — Supermarché en Ligne Intelligent",
       coverImage: "/images/projets/Front/epicerie-supermarket.png",
       video: "/images/projets/epicerie-supermarket/video.mp4",
       images: [],
@@ -109,9 +101,7 @@ export const projetsData = {
     },
     {
       id: "library-management",
-      title: "Library Management System",
-      org: "Projet académique — Cycle Ingénieur",
-      domain: "Gestion documentaire · Full Stack · Intégration d’API",
+      title: "Système de Gestion de Bibliothèque",
       coverImage: "/images/projets/Front/library-management.png",
       video: "/images/projets/library-management/video.mp4",
       images: [],
@@ -130,9 +120,7 @@ export const projetsData = {
     },
     {
       id: "discover-morocco-2030",
-      title: "Discover Morocco 2030",
-      org: "Projet académique — Cycle Ingénieur à l'IGA",
-      domain: "Tourisme numérique · IA générative · Automatisation",
+      title: "Discover Morocco 2030 — Portail Touristique & IA",
       coverImage: "/images/projets/Front/discover-morocco.png",
       video: "/images/projets/discover-morocco/video.mp4",
       images: [],
@@ -150,9 +138,7 @@ export const projetsData = {
     },
     {
       id: "academic-ai-assistant",
-      title: "Academic AI Assistant",
-      org: "Stage chez DXC Technology Morocco",
-      domain: "IA générative · Chatbot · Automatisation des processus",
+      title: "Assistant IA Académique",
       coverImage: "/images/projets/Front/academic-ai-assistant.jpg",
       video: null,
       images: [
@@ -175,9 +161,7 @@ export const projetsData = {
     },
     {
       id: "magnolia-cosmetics",
-      title: "Magnolia — Cosmetics E-commerce Platform",
-      org: "Projet académique en binôme",
-      domain: "E-commerce · Développement Web · Gestion des accès",
+      title: "Magnolia — Plateforme E-commerce de Cosmétiques",
       coverImage: "/images/projets/Front/magnolia-cosmetics.png",
       video: "/images/projets/magnolia-cosmetics/video.mp4",
       images: [],

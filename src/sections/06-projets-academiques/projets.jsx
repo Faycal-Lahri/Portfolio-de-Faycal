@@ -15,19 +15,11 @@ function ProjectDocumentation({ project }) {
 
   return (
     <div className="flex flex-col gap-5 text-left font-sans">
-      {/* Header: Catégorie, Titre & Organisation */}
+      {/* Header: Titre du Projet */}
       <div>
-        {project.domain && (
-          <p className="text-[11px] font-medium tracking-wider uppercase text-neutral-500 dark:text-neutral-400 mb-1.5">
-            {project.domain}
-          </p>
-        )}
         <h3 className="text-2xl sm:text-3xl font-bold text-neutral-950 dark:text-white tracking-tight leading-snug">
           {project.title}
         </h3>
-        <p className="text-xs text-neutral-500 dark:text-neutral-400 font-medium mt-1">
-          {project.org}
-        </p>
       </div>
 
       <div className="h-px w-full bg-neutral-200/80 dark:bg-white/10" />
