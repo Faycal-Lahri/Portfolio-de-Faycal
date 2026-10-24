@@ -114,10 +114,10 @@ export function ProjetsAcademiques() {
   useEffect(() => {
     const updateStep = () => {
       const w = window.innerWidth;
-      if (w < 640) setStep(150);
-      else if (w < 768) setStep(210);
-      else if (w < 1024) setStep(260);
-      else setStep(300);
+      if (w < 640) setStep(140);
+      else if (w < 768) setStep(180);
+      else if (w < 1024) setStep(210);
+      else setStep(240);
     };
     updateStep();
     window.addEventListener('resize', updateStep);
@@ -286,7 +286,27 @@ export function ProjetsAcademiques() {
       */}
       <div className="w-full max-w-[1240px] mx-auto rounded-[28px] sm:rounded-[36px] md:rounded-[44px] bg-black dark:bg-white text-white dark:text-neutral-900 border border-neutral-800 dark:border-neutral-200 py-8 sm:py-10 md:py-12 px-3 sm:px-6 md:px-10 relative overflow-hidden flex flex-col items-center justify-center shadow-2xl transition-colors duration-300">
         
-        {/* 3D Coverflow Stage */}
+        {/* PC Left Arrow Button - Placed on the plinth flank, completely clear of all project images */}
+        <button
+          type="button"
+          onClick={() => goTo(activeIndex - 1)}
+          aria-label="Projet précédent"
+          className="hidden md:flex absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-40 w-11 h-11 lg:w-12 lg:h-12 rounded-full items-center justify-center bg-white/15 dark:bg-black/5 hover:bg-white/25 dark:hover:bg-black/10 text-white dark:text-neutral-900 border border-white/25 dark:border-black/15 backdrop-blur-md shadow-xl transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer group select-none"
+        >
+          <ChevronLeft className="w-5 h-5 lg:w-6 lg:h-6 transition-transform group-hover:-translate-x-0.5" />
+        </button>
+
+        {/* PC Right Arrow Button - Placed on the plinth flank, completely clear of all project images */}
+        <button
+          type="button"
+          onClick={() => goTo(activeIndex + 1)}
+          aria-label="Projet suivant"
+          className="hidden md:flex absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-40 w-11 h-11 lg:w-12 lg:h-12 rounded-full items-center justify-center bg-white/15 dark:bg-black/5 hover:bg-white/25 dark:hover:bg-black/10 text-white dark:text-neutral-900 border border-white/25 dark:border-black/15 backdrop-blur-md shadow-xl transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer group select-none"
+        >
+          <ChevronRight className="w-5 h-5 lg:w-6 lg:h-6 transition-transform group-hover:translate-x-0.5" />
+        </button>
+
+        {/* 3D Coverflow Stage - Contained in center */}
         <div
           ref={containerRef}
           onMouseDown={handlePointerDown}
@@ -294,7 +314,7 @@ export function ProjetsAcademiques() {
           onTouchStart={handlePointerDown}
           onTouchMove={handlePointerMove}
           onTouchEnd={handlePointerUp}
-          className="relative w-full h-[220px] sm:h-[260px] md:h-[310px] lg:h-[340px] cursor-grab active:cursor-grabbing overflow-hidden flex items-center justify-center touch-pan-y"
+          className="relative w-full max-w-[820px] lg:max-w-[920px] h-[220px] sm:h-[260px] md:h-[300px] lg:h-[330px] cursor-grab active:cursor-grabbing overflow-visible flex items-center justify-center touch-pan-y"
           style={{
             perspective: '1200px',
             perspectiveOrigin: '50% 50%',
@@ -334,14 +354,14 @@ export function ProjetsAcademiques() {
                 scale = 1;
               } else if (isLeft) {
                 translateX = -step;
-                rotateY = 30;
-                translateZ = -45;
-                scale = 0.92;
+                rotateY = 28;
+                translateZ = -40;
+                scale = 0.9;
               } else if (isRight) {
                 translateX = step;
-                rotateY = -30;
-                translateZ = -45;
-                scale = 0.92;
+                rotateY = -28;
+                translateZ = -40;
+                scale = 0.9;
               }
 
               return (
@@ -361,7 +381,7 @@ export function ProjetsAcademiques() {
                     damping: 28,
                     mass: 0.7,
                   }}
-                  className="absolute left-1/2 top-1/2 -ml-[130px] sm:-ml-[170px] md:-ml-[210px] lg:-ml-[240px] -mt-[78px] sm:-mt-[100px] md:-mt-[123px] lg:-mt-[140px] w-[260px] sm:w-[340px] md:w-[420px] lg:w-[480px] h-[155px] sm:h-[200px] md:h-[245px] lg:h-[280px] rounded-lg sm:rounded-xl overflow-hidden bg-neutral-900 dark:bg-neutral-100 border border-white/10 dark:border-black/10 shadow-xl cursor-pointer will-change-transform group"
+                  className="absolute left-1/2 top-1/2 -ml-[130px] sm:-ml-[160px] md:-ml-[190px] lg:-ml-[215px] -mt-[78px] sm:-mt-[95px] md:-mt-[112px] lg:-mt-[128px] w-[260px] sm:w-[320px] md:w-[380px] lg:w-[430px] h-[155px] sm:h-[190px] md:h-[225px] lg:h-[255px] rounded-lg sm:rounded-xl overflow-hidden bg-neutral-900 dark:bg-neutral-100 border border-white/10 dark:border-black/10 shadow-xl cursor-pointer will-change-transform group"
                   style={{
                     transformStyle: 'preserve-3d',
                     zIndex: isCenter ? 30 : 20,
@@ -381,33 +401,6 @@ export function ProjetsAcademiques() {
                 </motion.div>
               );
             })}
-            {/* PC Left Arrow Button */}
-            <button
-              type="button"
-              onMouseDown={(e) => e.stopPropagation()}
-              onClick={(e) => {
-                e.stopPropagation();
-                goTo(activeIndex - 1);
-              }}
-              aria-label="Projet précédent"
-              className="hidden md:flex absolute left-2 lg:left-5 top-1/2 -translate-y-1/2 z-40 w-11 h-11 lg:w-12 lg:h-12 rounded-full items-center justify-center bg-white/10 dark:bg-black/5 hover:bg-white/20 dark:hover:bg-black/10 text-white dark:text-neutral-900 border border-white/20 dark:border-black/10 backdrop-blur-md shadow-xl transition-all duration-200 active:scale-90 cursor-pointer group select-none"
-            >
-              <ChevronLeft className="w-5 h-5 lg:w-6 lg:h-6 transition-transform group-hover:-translate-x-0.5" />
-            </button>
-
-            {/* PC Right Arrow Button */}
-            <button
-              type="button"
-              onMouseDown={(e) => e.stopPropagation()}
-              onClick={(e) => {
-                e.stopPropagation();
-                goTo(activeIndex + 1);
-              }}
-              aria-label="Projet suivant"
-              className="hidden md:flex absolute right-2 lg:right-5 top-1/2 -translate-y-1/2 z-40 w-11 h-11 lg:w-12 lg:h-12 rounded-full items-center justify-center bg-white/10 dark:bg-black/5 hover:bg-white/20 dark:hover:bg-black/10 text-white dark:text-neutral-900 border border-white/20 dark:border-black/10 backdrop-blur-md shadow-xl transition-all duration-200 active:scale-90 cursor-pointer group select-none"
-            >
-              <ChevronRight className="w-5 h-5 lg:w-6 lg:h-6 transition-transform group-hover:translate-x-0.5" />
-            </button>
           </div>
         </div>
 

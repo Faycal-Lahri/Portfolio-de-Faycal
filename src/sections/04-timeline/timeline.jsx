@@ -124,7 +124,7 @@ function MobileTimeline({ milestones }) {
                   </div>
 
                   {item.logo && (
-                    <div className="w-8 h-8 rounded-lg bg-white border border-neutral-200 dark:border-neutral-300 p-1 flex items-center justify-center shrink-0 shadow-sm overflow-hidden mt-0.5">
+                    <div className="w-16 sm:w-20 h-10 sm:h-12 rounded-xl bg-white border border-neutral-200/90 shadow-sm p-1.5 flex items-center justify-center shrink-0 overflow-hidden mt-0.5">
                       <img
                         src={item.logo}
                         alt={item.institution || item.heading}
@@ -340,7 +340,7 @@ function MilestoneText({ item, x, y, triggerPoint, smoothProgress }) {
         x: textOffset,
       }}
       className={`absolute z-20 pointer-events-auto ${
-        item.isFinalPfe ? 'w-auto whitespace-nowrap' : 'w-[290px] sm:w-[350px]'
+        item.isFinalPfe ? 'w-auto whitespace-nowrap' : 'w-[320px] sm:w-[390px] lg:w-[430px]'
       } text-left`}
     >
       {item.isFinalPfe ? (
@@ -348,7 +348,7 @@ function MilestoneText({ item, x, y, triggerPoint, smoothProgress }) {
           2027 : Et si on parlait PFE ? 😉
         </h3>
       ) : (
-        <div className="flex items-start justify-between gap-3">
+        <div className="flex items-start justify-between gap-4">
           <div className="flex-1 min-w-0">
             <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-foreground leading-tight font-sans">
               {item.period}
@@ -367,7 +367,7 @@ function MilestoneText({ item, x, y, triggerPoint, smoothProgress }) {
           </div>
 
           {item.logo && (
-            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-white border border-neutral-200 dark:border-neutral-300 p-1.5 flex items-center justify-center shrink-0 shadow-sm overflow-hidden mt-0.5">
+            <div className="w-20 sm:w-24 h-12 sm:h-14 rounded-2xl bg-white border border-neutral-200/90 shadow-md p-2 flex items-center justify-center shrink-0 overflow-hidden mt-0.5 transition-transform hover:scale-105">
               <img
                 src={item.logo}
                 alt={item.institution || item.heading}
