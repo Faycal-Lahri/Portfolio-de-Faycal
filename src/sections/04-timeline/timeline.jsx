@@ -105,22 +105,35 @@ function MobileTimeline({ milestones }) {
                   2027 : Et si on parlait PFE ? 😉
                 </h3>
               ) : (
-                <>
-                  <h3 className="text-lg sm:text-xl font-bold tracking-tight text-foreground font-sans leading-tight">
-                    {item.period}
-                  </h3>
-                  <p className="text-sm font-semibold text-foreground/90 mt-0.5 leading-snug">
-                    {item.heading}
-                    {item.institution && (
-                      <span className="text-muted-foreground font-normal"> — {item.institution}</span>
-                    )}
-                  </p>
-                  {item.detail && (
-                    <p className="text-xs text-muted-foreground leading-relaxed mt-1 font-normal">
-                      {item.detail}
+                <div className="flex items-start justify-between gap-3">
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-lg sm:text-xl font-bold tracking-tight text-foreground font-sans leading-tight">
+                      {item.period}
+                    </h3>
+                    <p className="text-sm font-semibold text-foreground/90 mt-0.5 leading-snug">
+                      {item.heading}
+                      {item.institution && (
+                        <span className="text-muted-foreground font-normal"> — {item.institution}</span>
+                      )}
                     </p>
+                    {item.detail && (
+                      <p className="text-xs text-muted-foreground leading-relaxed mt-1 font-normal">
+                        {item.detail}
+                      </p>
+                    )}
+                  </div>
+
+                  {item.logo && (
+                    <div className="w-8 h-8 rounded-lg bg-white border border-neutral-200 dark:border-neutral-300 p-1 flex items-center justify-center shrink-0 shadow-sm overflow-hidden mt-0.5">
+                      <img
+                        src={item.logo}
+                        alt={item.institution || item.heading}
+                        className="w-full h-full object-contain"
+                        draggable={false}
+                      />
+                    </div>
                   )}
-                </>
+                </div>
               )}
             </div>
           </div>
@@ -327,7 +340,7 @@ function MilestoneText({ item, x, y, triggerPoint, smoothProgress }) {
         x: textOffset,
       }}
       className={`absolute z-20 pointer-events-auto ${
-        item.isFinalPfe ? 'w-auto whitespace-nowrap' : 'w-[280px] sm:w-[340px]'
+        item.isFinalPfe ? 'w-auto whitespace-nowrap' : 'w-[290px] sm:w-[350px]'
       } text-left`}
     >
       {item.isFinalPfe ? (
@@ -335,22 +348,35 @@ function MilestoneText({ item, x, y, triggerPoint, smoothProgress }) {
           2027 : Et si on parlait PFE ? 😉
         </h3>
       ) : (
-        <>
-          <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-foreground leading-tight font-sans">
-            {item.period}
-          </h3>
-          <p className="text-sm sm:text-[15px] font-semibold text-foreground/95 mt-1 leading-snug">
-            {item.heading}
-            {item.institution && (
-              <span className="text-muted-foreground font-normal"> — {item.institution}</span>
-            )}
-          </p>
-          {item.detail && (
-            <p className="text-xs sm:text-[13px] text-zinc-400 font-sans leading-relaxed mt-1 font-normal">
-              {item.detail}
+        <div className="flex items-start justify-between gap-3">
+          <div className="flex-1 min-w-0">
+            <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-foreground leading-tight font-sans">
+              {item.period}
+            </h3>
+            <p className="text-sm sm:text-[15px] font-semibold text-foreground/95 mt-1 leading-snug">
+              {item.heading}
+              {item.institution && (
+                <span className="text-muted-foreground font-normal"> — {item.institution}</span>
+              )}
             </p>
+            {item.detail && (
+              <p className="text-xs sm:text-[13px] text-zinc-400 font-sans leading-relaxed mt-1 font-normal">
+                {item.detail}
+              </p>
+            )}
+          </div>
+
+          {item.logo && (
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-white border border-neutral-200 dark:border-neutral-300 p-1.5 flex items-center justify-center shrink-0 shadow-sm overflow-hidden mt-0.5">
+              <img
+                src={item.logo}
+                alt={item.institution || item.heading}
+                className="w-full h-full object-contain"
+                draggable={false}
+              />
+            </div>
           )}
-        </>
+        </div>
       )}
     </motion.div>
   );

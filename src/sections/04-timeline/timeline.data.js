@@ -23,6 +23,7 @@ export const timelineData = {
       institution: "Digital Owner & Project Coordinator",
       detail: "Expérience en coordination et gestion de projets numériques.",
       position: "top",
+      logo: "/images/experiences/digital-owner.png",
     },
     {
       period: "2024 – 2025",
@@ -44,6 +45,7 @@ export const timelineData = {
       institution: "DXC Technology Morocco",
       detail: "Développement d’un assistant intelligent et workflows n8n.",
       position: "bottom",
+      logo: "/images/experiences/dxc.png",
     },
     {
       period: "2025 – Présent",
@@ -58,6 +60,7 @@ export const timelineData = {
       institution: "Eurafric Information",
       detail: "Console back-office de gestion des souscriptions OPV (React, Spring Boot).",
       position: "bottom",
+      logo: "/images/experiences/eurafric.png",
     },
     {
       period: "Sept. – Oct. 2026",
@@ -65,6 +68,7 @@ export const timelineData = {
       institution: "Royal Air Maroc",
       detail: "Suivi opérationnel des vols et régulation de flotte.",
       position: "top",
+      logo: "/images/experiences/royal-air-maroc.svg",
     },
     {
       period: "2027",

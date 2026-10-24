@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
 import { projetsData } from './projets.data';
 
 const isVideoUrl = (url) => {
@@ -381,6 +381,33 @@ export function ProjetsAcademiques() {
                 </motion.div>
               );
             })}
+            {/* PC Left Arrow Button */}
+            <button
+              type="button"
+              onMouseDown={(e) => e.stopPropagation()}
+              onClick={(e) => {
+                e.stopPropagation();
+                goTo(activeIndex - 1);
+              }}
+              aria-label="Projet précédent"
+              className="hidden md:flex absolute left-2 lg:left-5 top-1/2 -translate-y-1/2 z-40 w-11 h-11 lg:w-12 lg:h-12 rounded-full items-center justify-center bg-white/10 dark:bg-black/5 hover:bg-white/20 dark:hover:bg-black/10 text-white dark:text-neutral-900 border border-white/20 dark:border-black/10 backdrop-blur-md shadow-xl transition-all duration-200 active:scale-90 cursor-pointer group select-none"
+            >
+              <ChevronLeft className="w-5 h-5 lg:w-6 lg:h-6 transition-transform group-hover:-translate-x-0.5" />
+            </button>
+
+            {/* PC Right Arrow Button */}
+            <button
+              type="button"
+              onMouseDown={(e) => e.stopPropagation()}
+              onClick={(e) => {
+                e.stopPropagation();
+                goTo(activeIndex + 1);
+              }}
+              aria-label="Projet suivant"
+              className="hidden md:flex absolute right-2 lg:right-5 top-1/2 -translate-y-1/2 z-40 w-11 h-11 lg:w-12 lg:h-12 rounded-full items-center justify-center bg-white/10 dark:bg-black/5 hover:bg-white/20 dark:hover:bg-black/10 text-white dark:text-neutral-900 border border-white/20 dark:border-black/10 backdrop-blur-md shadow-xl transition-all duration-200 active:scale-90 cursor-pointer group select-none"
+            >
+              <ChevronRight className="w-5 h-5 lg:w-6 lg:h-6 transition-transform group-hover:translate-x-0.5" />
+            </button>
           </div>
         </div>
 
