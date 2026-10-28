@@ -32,7 +32,10 @@ export default function RootLayout({
       <head>
         <meta name="apple-mobile-web-app-title" content="Faycal´s portfolio" />
       </head>
-      <body className="antialiased bg-background text-foreground selection:bg-foreground selection:text-background min-h-screen">
+      <body
+        suppressHydrationWarning
+        className="antialiased bg-background text-foreground selection:bg-foreground selection:text-background min-h-screen"
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

@@ -7,6 +7,7 @@ export interface Milestone {
   id: string;
   year?: string;
   date: string;
+  duration?: string;
   title: string;
   company?: string;
   location?: string;
@@ -100,6 +101,11 @@ export default function ScrollTimeline({ milestones, className = "" }: TimelineP
                 )}
                 <span className="text-sm font-normal text-neutral-500 dark:text-neutral-400 mt-0.5 block">
                   {milestone.date}
+                  {milestone.duration && (
+                    <span className="text-xs font-normal text-neutral-400 dark:text-neutral-500 ml-1.5 whitespace-nowrap">
+                      · {milestone.duration}
+                    </span>
+                  )}
                 </span>
                 {milestone.location && (
                   <span className="text-xs text-neutral-400 dark:text-neutral-500 mt-1 block">
@@ -208,6 +214,11 @@ export default function ScrollTimeline({ milestones, className = "" }: TimelineP
                     <div>
                       <span className="text-base font-bold text-foreground block leading-tight">
                         {milestone.date}
+                        {milestone.duration && (
+                          <span className="text-xs font-normal text-neutral-500 dark:text-neutral-400 ml-1.5 whitespace-nowrap">
+                            · {milestone.duration}
+                          </span>
+                        )}
                       </span>
                       {milestone.location && (
                         <span className="text-xs text-neutral-400 block mt-0.5">

@@ -5,10 +5,11 @@ export const experiencesData = {
     {
       id: "eurafric-software-engineer",
       year: "2026",
-      date: "Juillet – Août 2026",
+      date: "Juin – Août 2026",
+      duration: "3 mois",
       title: "Software Engineer Intern",
-      company: "Eurafric Information",
-      location: "Bouskoura, Casablanca",
+      company: "EURAFRIC INFORMATION",
+      location: "Bouskoura, Casablanca-Settat · Sur site",
       logo: "/images/experiences/eurafric.png",
       summary: "Conception et développement d’une console back-office bancaire dédiée à la gestion complète des souscriptions aux Offres Publiques de Vente (OPV), au sein de la Division Digital Dev & Transverse.",
       bullets: [
@@ -34,10 +35,11 @@ export const experiencesData = {
     {
       id: "dxc-ai-automation",
       year: "2025",
-      date: "Juillet – Août 2025",
+      date: "Juin – Septembre 2025",
+      duration: "4 mois",
       title: "AI & Automation Intern",
       company: "DXC Technology Morocco",
-      location: "Rabat",
+      location: "Rabat, Maroc",
       logo: "/images/experiences/dxc.png",
       summary: "Conception d’un assistant intelligent et orchestration de workflows automatisés visant à centraliser et simplifier le traitement des demandes récurrentes des étudiants.",
       bullets: [
@@ -57,10 +59,11 @@ export const experiencesData = {
     {
       id: "iga-it-support",
       year: "2024",
-      date: "Septembre 2024",
+      date: "Août – Septembre 2024",
+      duration: "2 mois",
       title: "IT Support Technician",
       company: "IGA Casablanca",
-      location: "Sur site, Casablanca",
+      location: "Casablanca, Maroc · Sur site",
       logo: "/images/experiences/iga.png",
       summary: "Support technique opérationnel et maintenance de l'infrastructure informatique et réseau auprès des étudiants et du personnel du campus universitaire.",
       bullets: [
@@ -71,10 +74,11 @@ export const experiencesData = {
     },
     {
       id: "freelance-digital-owner",
-      year: "2023",
-      date: "Mai – Octobre 2023",
-      title: "Freelance Digital Owner & Project Coordinator",
-      company: "Digital Owner",
+      year: "2023 – 2024",
+      date: "Mai 2023 – Janvier 2024",
+      duration: "9 mois",
+      title: "Project Coordinator",
+      company: "Digital Owner · Freelance",
       location: "À distance",
       logo: "/images/experiences/digital-owner.png",
       summary: "Coordination et cadrage de projets numériques, de la définition des besoins jusqu'au suivi de réalisation entre équipes de développement et de design.",
@@ -85,6 +89,8 @@ export const experiencesData = {
         "Contribution à l’organisation du travail et à la communication autour des projets numériques.",
       ],
       technologies: [
+        "Team Leadership",
+        "Communication",
         "Jira",
         "Slack",
         "Méthodes Agiles",
