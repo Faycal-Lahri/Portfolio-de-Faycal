@@ -18,5 +18,5 @@ export const heroData = {
   readMoreHref: "#profile",
   portraitSrc: "/images/faycal-cutout.png",
   availability: "Stage PFE 6 mois • Fév – Mars 2027",
-  location: "Paris / Île-de-France",
+  location: "Mobilité totale en France",
 };

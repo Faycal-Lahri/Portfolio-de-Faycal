@@ -66,10 +66,7 @@ export function FullScreenMobileNavigation({
           >
             <div className="flex flex-col">
               <span className="font-semibold text-lg tracking-tight text-foreground">
-                Fayçal Lahri
-              </span>
-              <span className="text-xs text-muted-foreground font-mono">
-                Ingénieur Logiciel • PFE 2027
+                FAYCAL LAHRI
               </span>
             </div>
 
@@ -147,13 +144,13 @@ export function FullScreenMobileNavigation({
           >
             <div>
               <span>Stage PFE 6 mois • </span>
-              <span className="text-foreground font-medium">Paris / Île-de-France (Fév – Mars 2027)</span>
+              <span className="text-foreground font-medium">Mobilité totale en France (Fév – Mars 2027)</span>
             </div>
             <a
-              href="mailto:faycal.lahri.contact@gmail.com"
+              href="mailto:faycallahri999@gmail.com"
               className="text-foreground font-mono hover:underline"
             >
-              faycal.lahri.contact@gmail.com
+              faycallahri999@gmail.com
             </a>
           </motion.div>
         </motion.div>
